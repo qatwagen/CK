@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Recipe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>{{ dish_name }}</h1>
+    </header>
+
+    <section class="recipe-section">
+        <div class="container">
+            <div class="ingredients">
+                <h2>Ingredients</h2><br>
+                <ul>
+                    {% for ingredient in ingredients %}
+                        {% if ingredient.strip() != "" %}
+                            <li>{{ ingredient }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="steps">
+                <h2>Steps</h2>
+                <ol class="step-list">
+                    {% for step in steps %}
+                        {% if step.strip() != "" %}
+                            <li>{{ step }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
