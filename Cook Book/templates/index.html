@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB Recipe Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Cook Book</a>
+            <ul class="nav-links">
+                <li><a href="/">New Recipie</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container"><br>
+            <h1 class="title">Recipe Generator</h1><br>
+            <form action="/generate" method="post" class="form">
+                <input type="text" name="dish_name" placeholder="Enter Dish Name" required class="input-field">
+                <button type="submit" class="btn">Generate Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Cook Book</p>
+        </div>
+    </footer>
+</body>
+</html>
